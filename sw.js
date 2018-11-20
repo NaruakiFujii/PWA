@@ -55,3 +55,4 @@ return fetch(fetchRequest).then(
     return response;
   }
 );
+});
