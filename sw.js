@@ -1,8 +1,8 @@
 var CACHE_NAME = 'cache-v1';
 var urlsToCache = [
-	'/PWA',
+	'/PWA/html',
 	'/PWA/manifest.json',
-	'/PWA/index.html',
+	'/PWA/html/index.html',
 	'/PWA/js/index.js',
 	'https://code.jquery.com/jquery-3.3.1.min.js'
 ];
