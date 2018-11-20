@@ -1,6 +1,6 @@
 var CACHE_NAME = 'cache-v1';
 var urlsToCache = [
-	'/PWA/html',
+	'/PWA',
 	'/PWA/manifest.json',
 	'/PWA/html/index.html',
 	'/PWA/js/index.js',
