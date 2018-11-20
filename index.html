@@ -1,4 +1,25 @@
 <link rel="manifest" href="manifest.json">
 <script type="text/javascript" src="js/registSw.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 
-"hello world!!"
+<header class="homeheader">
+	<h1>HOME</h1>
+</header>
+<body>
+	<div class="time">
+		<p>現在時刻は
+		<span id="currenttime">
+			<script>
+				var time= new Date();
+				var hour = time.getHours();
+				var minute = time.getMinutes();
+				var second = time.getSeconds();
+				document.write(hour+"時"+minute+"分"+second+"秒");
+			</script>
+		</span>
+		です</p>
+
+	</div>
+	<input class="arrive" type="button" value="出社" />
+	<input class="leave" type="button" value="退社" />
+</body>
