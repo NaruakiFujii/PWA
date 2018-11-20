@@ -47,11 +47,9 @@ return fetch(fetchRequest).then(
     // 2つの Stream があるようにする
     var responseToCache = response.clone();
 
-    caches.open(CACHE_NAME)
-        .then(function(cache) {
-        	cache.put(event.request, responseToCache);
-        });
+    caches.open(CACHE_NAME).then(function(cache) {
+        cache.put(event.request, responseToCache);
+    });
 
     return response;
-    });
 });
