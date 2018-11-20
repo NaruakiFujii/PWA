@@ -1,0 +1,6 @@
+{
+	"short_name" : "PWA_test",
+	"name" : "PWA_test",
+	"start_url" : "https://naruakifujii.github.io/PWA/",
+	"display" : "standalone",
+}
