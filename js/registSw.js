@@ -1,7 +1,7 @@
 /**
  *
  */
-navigator.serviceWorker.register('/sw.js').then(function() {
+navigator.serviceWorker.register('sw.js').then(function() {
 
 
         console.log('サービスワーカーの登録成功');
