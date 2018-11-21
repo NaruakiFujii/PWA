@@ -9,7 +9,7 @@ $(function(){
         var pass = window.sessionStorage.getItem(['userPass']);
 
         if(id!=null && pass !=null){
-        	$('#time').after('<div id="submit_result" class="section__block section__block--notification"><p>id:'+id+'</br>pass  :'+pass+'</br>セッション情報を保持しています。</p></div>');
+        	$('.time').after('<div id="submit_result" class="section__block section__block--notification"><p>id:'+id+'</br>pass  :'+pass+'</br>セッション情報を保持しています。</p></div>');
         }
 
 	})();
