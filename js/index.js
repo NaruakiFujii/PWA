@@ -11,7 +11,7 @@ $(function() {
 		var loginStatus = checkLogin(data);
 
 		if (!loginStatus) {
-			$(this).attr('href', location.pathname);
+			$(this).attr('onclick', "location.href='/views/timeStamp'" + location.pathname);
 		}
 	});
 
