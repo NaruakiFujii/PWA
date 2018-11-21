@@ -1,29 +1,31 @@
-<link rel="manifest" href="manifest.json">
-<script
-	src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/registSw.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<html>
+	<head>
+		<meta charset="UTF-8"></meta>
+		<link rel="manifest" href="manifest.json">
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/registSw.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</head>
 
-<header class="homeheader">
-	<h1>HOME</h1>
-</header>
-<body>
-	<div class="time">
-		<p>現在時刻は
-		<span id="currenttime">
-			<script>
-				var time= new Date();
-				var hour = time.getHours();
-				var minute = time.getMinutes();
-				var second = time.getSeconds();
-				document.write(hour+"時"+minute+"分"+second+"秒");
-			</script>
-		</span>
-		です</p>
-
-	</div>
-	<input class="arrive" type="button" value="出社" />
-	<input class="leave" type="button" value="退社" />
-</body>
+	<header class="homeheader">
+		<h1>LOGIN</h1>
+	</header>
+	<body>
+		<div class="time">
+			<p class="id">ID：
+				<input type="text" value="id" />
+			</p>
+			<p class="password">PASSWORD：
+				<input type="password" value="password"/>
+			</p>
+		</div>
+		<div class="buttonarea">
+			<p>
+				<button type="submit" class="loginbutton" href="/views/home" value="ログイン">ログイン</button>
+			</p>
+		</div>
+	</body>
+</html>
