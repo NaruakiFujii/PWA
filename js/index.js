@@ -16,10 +16,11 @@ $(function() {
 	});
 
 	function checkLogin(id, pass) {
-		var fs = new ActiveXObject("Scripting.FileSystemObject");
-		var file = fs.OpenTextFile("C:\_dev\\testDB.txt");
-
-		var str = file.ReadLine();
+//		var fs = new ActiveXObject("Scripting.FileSystemObject");
+//		var file = fs.OpenTextFile("C:\_dev\\testDB.txt");
+//
+//		var str = file.ReadLine();
+		var str = "0001 1";
 		var dbData = str.split(' ');
 
 		if (data.id === dbData[0] && data.pass === dbData[1]) {
