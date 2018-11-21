@@ -11,8 +11,7 @@ $(function() {
 		var loginStatus = checkLogin(data);
 
 		if (!loginStatus) {
-			var url = "location.href='" + location.pathname + "'"
-			$(this).attr('onclick', url);
+			location.href = location.href;
 		}
 	});
 
