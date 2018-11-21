@@ -5,8 +5,8 @@ $(function() {
 		var inputPass = ($("input[name='password']").val() != "" || null);
 
 		var data = {
-			inputId : ipnutId,
-			inputPass : inputPass
+			id : inputId,
+			pass : inputPass
 		}
 		var loginStatus = checkLogin(data);
 
