@@ -13,6 +13,10 @@ $(function() {
 		if (!loginStatus) {
 			location.href = location.href;
 		}
+
+		window.sessionStorage.setItem(['userId'], [inputId]);
+		window.sessionStorage.setItem(['userPass'], [inputPass]);
+
 	});
 
 	function checkLogin(data) {
