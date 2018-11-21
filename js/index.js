@@ -1,8 +1,8 @@
 $(function() {
 	$('.loginbutton').click(function() {
 
-		var inputId = ($("input[name='id']").val() != "" || null);
-		var inputPass = ($("input[name='password']").val() != "" || null);
+		var inputId = ($("input[name='id']").val());
+		var inputPass = ($("input[name='password']").val());
 
 		var data = {
 			id : inputId,
