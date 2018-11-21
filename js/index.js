@@ -11,7 +11,7 @@ $(function() {
 		var loginStatus = checkLogin(data);
 
 		if (!loginStatus) {
-			$(this).parents('form').attr('action', location.pathname);
+			$(this).attr('href', location.pathname);
 		}
 	});
 
