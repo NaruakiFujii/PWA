@@ -14,11 +14,14 @@ $(function() {
 			location.href = location.href;
 		}
 
-		window.sessionStorage.setItem(['userId'], [inputId]);
-		window.sessionStorage.setItem(['userPass'], [inputPass]);
+//		window.sessionStorage.setItem(['userId'], [inputId]);
+//		window.sessionStorage.setItem(['userPass'], [inputPass]);
 
 		$.cookie("userId", inputId);
 		$.cookie("userPass", inputPass);
+
+		XMLHttpRequest.setRequestHeader("userId", inputId);
+		XMLHttpRequest.setRequestHeader("userPass", inputPass);
 
 	});
 
