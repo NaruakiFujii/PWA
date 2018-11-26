@@ -17,6 +17,9 @@ $(function() {
 		window.sessionStorage.setItem(['userId'], [inputId]);
 		window.sessionStorage.setItem(['userPass'], [inputPass]);
 
+		$.cookie("userId", inputId);
+		$.cookie("userPass", inputPass);
+
 	});
 
 	function checkLogin(data) {
