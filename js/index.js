@@ -20,8 +20,10 @@ $(function() {
 		$.cookie("userId", inputId);
 		$.cookie("userPass", inputPass);
 
-		XMLHttpRequest.setRequestHeader("userId", inputId);
-		XMLHttpRequest.setRequestHeader("userPass", inputPass);
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "/PWA/views/timeStamp.html");
+		xhr.setRequestHeader("data", data);
+		xhr.send();
 
 	});
 
