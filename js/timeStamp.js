@@ -12,7 +12,10 @@ $(function(){
 //			$('.time').after('<div id="submit_result" class="section__block section__block--notification"><p>id:'+id+'</br>pass  :'+pass+'</br>セッション情報を保持しています。</p></div>');
 //		}
 
-		alert(XMLHttpRequest.getAllResponseHeaders());
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", "");
+		alert(xhr.getAllResponseHeaders());
+		xhr.send();
 
 	})();
 
