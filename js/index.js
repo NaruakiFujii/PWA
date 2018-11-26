@@ -22,7 +22,7 @@ $(function() {
 
 		var xhr = new XMLHttpRequest();
 		xhr.open("POST", "/PWA/views/timeStamp.html");
-		xhr.setRequestHeader("user-info", data);
+		xhr.setRequestHeader("X-user", data);
 		xhr.send();
 
 	});
