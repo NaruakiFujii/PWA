@@ -29,6 +29,7 @@ $(function() {
 		}).then(function(response){
 			return response.json();
 		});
+	});
 
 	function checkLogin(data) {
 //		var fs = new ActiveXObject("Scripting.FileSystemObject");
