@@ -20,10 +20,15 @@ $(function() {
 //		$.cookie("userId", inputId);
 //		$.cookie("userPass", inputPass);
 
-		var myHeaders = new Headers({"X-userData" : data});
+//		var myHeaders = new Headers({"X-userData" : data});
 //		myHeaders.append("X-userData", data);
 
-	});
+		var url = "/PWA/views/timeStamp.html";
+		fetch(url, {
+			headers: {'X-userData': data}
+		}).then(function(response){
+			return response.json();
+		});
 
 	function checkLogin(data) {
 //		var fs = new ActiveXObject("Scripting.FileSystemObject");
