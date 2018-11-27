@@ -12,7 +12,8 @@ $(function(){
 //			$('.time').after('<div id="submit_result" class="section__block section__block--notification"><p>id:'+id+'</br>pass  :'+pass+'</br>セッション情報を保持しています。</p></div>');
 //		}
 
-		alert($.cookie("userId"));
+//		alert($.cookie("userId"));
+		console.log(myHeaders.get("X-userData"));
 
 	})();
 
