@@ -14,7 +14,7 @@ $(function(){
 
 //		alert($.cookie("userId"));
 
-		var myHeaders = new Headers(null);
+		var myHeaders = new Headers("none");
 		console.log(myHeaders.get("X-userData"));
 
 	})();
