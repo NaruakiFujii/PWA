@@ -13,6 +13,8 @@ $(function(){
 //		}
 
 //		alert($.cookie("userId"));
+
+		var myHeaders = new Headers(null);
 		console.log(myHeaders.get("X-userData"));
 
 	})();
