@@ -20,7 +20,8 @@ $(function() {
 //		$.cookie("userId", inputId);
 //		$.cookie("userPass", inputPass);
 
-		var myHeaders = new Headers({"none" : "none"});
+		var init = {"X-userData": data};
+		var myHeaders = new Headers(init);
 		myHeaders.append("X-userData", data);
 
 	});
