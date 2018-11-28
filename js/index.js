@@ -37,7 +37,7 @@ $(function() {
 
 	function checkLogin(data) {
 		var fs = new ActiveXObject("Scripting.FileSystemObject");
-		var file = fs.OpenTextFile("../testDB.txt");
+		var file = fs.OpenTextFile("testDB.txt");
 		var str = file.ReadLine();
 
 		//サーバーからデータ取ってきたい
