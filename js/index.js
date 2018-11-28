@@ -36,17 +36,22 @@ $(function() {
 	});
 
 	function checkLogin(data) {
-		var fs = new ActiveXObject("Scripting.FileSystemObject");
-		var file = fs.OpenTextFile("testDB.txt");
-		var str = file.ReadLine();
+		var url = "/PWA/testDB.text";
+		fetch(url)
+			.then(response => {
+				var dbData = response.text().split(' ');
+				if (data.id === dbData[0] && data.pass === dbData[1]) {
+					return true;
+				}
+			})
 
 		//サーバーからデータ取ってきたい
 //		var str = "0001 1";
-		var dbData = str.split(' ');
-
-		if (data.id === dbData[0] && data.pass === dbData[1]) {
-			return true;
-		}
+//		var dbData = str.split(' ');
+//
+//		if (data.id === dbData[0] && data.pass === dbData[1]) {
+//			return true;
+//		}
 		return false;
 	}
 });
