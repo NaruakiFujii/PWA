@@ -6,6 +6,9 @@
 			src="https://code.jquery.com/jquery-3.3.1.min.js"
 			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" type="text/css" href="../css/modal.css">
+
 		<script type="text/javascript" src="../js/jquery.cookie.js"></script>
 		<script type="text/javascript" src="../js/timeStamp.js"></script>
 		<script type="text/javascript" src="../js/fetch.js"></script>
@@ -28,7 +31,20 @@
 			です</p>
 
 		</div>
-		<input class="arrive" type="button" value="出社" />
-		<input class="leave" type="button" value="退社" />
+		<input data-target="arrive" class="modal-open" type="button" value="出社" />
+		<input data-target="leave" class="modal-open" type="button" value="退社" />
+
+		<div id="arrive" class="modal-content">
+			<p>出社打刻しますか？</p>
+			<input class="arrive-button modal-close" type="button" value="出社" />
+			<input class="modal-close" type="button" value="キャンセル" />
+		</div>
+
+		<div id="leave" class="modal-content">
+			<p>退社打刻しますか？</p>
+			<input class="leave-button modal-close" type="button" value="退社" />
+			<input class="modal-close" type="button" value="キャンセル" />
+		</div>
+
 	</body>
 </html>

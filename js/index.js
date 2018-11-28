@@ -14,14 +14,18 @@ $(function() {
 			location.href = location.href;
 		}
 
+		//session
 //		window.sessionStorage.setItem(['userId'], [inputId]);
 //		window.sessionStorage.setItem(['userPass'], [inputPass]);
 
-//		$.cookie("userId", inputId);
-//		$.cookie("userPass", inputPass);
+		//cookie
+		$.cookie("userData", data);
 
-		var myHeaders = new Headers();
-		myHeaders.append("X-userData", data);
+		////fetchAPI試してみた
+		//Ajaxみたいな非同期通信だった…
+		//いずれ使える。使ってるとかっこいいかも…
+//		var myHeaders = new Headers();
+//		myHeaders.append("X-userData", data);
 //
 //		var url = "/PWA/views/timeStamp.html";
 //		fetch(url, {
@@ -32,10 +36,7 @@ $(function() {
 	});
 
 	function checkLogin(data) {
-//		var fs = new ActiveXObject("Scripting.FileSystemObject");
-//		var file = fs.OpenTextFile("C:\_dev\\testDB.txt");
-//
-//		var str = file.ReadLine();
+		//サーバーからデータ取ってきたい
 		var str = "0001 1";
 		var dbData = str.split(' ');
 
