@@ -36,7 +36,7 @@ $(function() {
 	});
 
 	function checkLogin(data) {
-		var url = "/testDB.text";
+		var url = "/PWA/testDB.text";
 		fetch(url)
 			.then(response => {
 				var dbData = response.text().split(' ');
