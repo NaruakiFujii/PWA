@@ -36,8 +36,12 @@ $(function() {
 	});
 
 	function checkLogin(data) {
+		var fs = new ActiveXObject("Scripting.FileSystemObject");
+		var file = fs.OpenTextFile("../testDB.txt");
+		var str = file.ReadLine();
+
 		//サーバーからデータ取ってきたい
-		var str = "0001 1";
+//		var str = "0001 1";
 		var dbData = str.split(' ');
 
 		if (data.id === dbData[0] && data.pass === dbData[1]) {

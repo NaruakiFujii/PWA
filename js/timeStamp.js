@@ -21,12 +21,12 @@ $(function(){
 
 	})();
 
-//	$('.arrive').click(function(){
-//		alert("出社打刻しました");
-//	});
-//	$('.leave').click(function(){
-//		alert("退社打刻しました");
-//	});
+	$('.arrive-button').click(function(){
+		alert("出社打刻しました");
+	});
+	$('.leave-button').click(function(){
+		alert("退社打刻しました");
+	});
 
 	$('.modal-open').click(function(){
 	    // オーバーレイ用の要素を追加
