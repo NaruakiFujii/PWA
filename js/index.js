@@ -40,8 +40,7 @@ $(function() {
 		fetch(url)
 			.then(function(response) {
 				var str = response.text();
-				alert(str);
-//				var dbData = str.split();
+				var dbData = str.promise.split();
 				if (data.id === dbData[0] && data.pass === dbData[1]) {
 					return true;
 				}
