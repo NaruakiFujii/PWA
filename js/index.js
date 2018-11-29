@@ -54,7 +54,6 @@ $(function() {
 //		if (data.id === dbData[0] && data.pass === dbData[1]) {
 //			return true;
 //		}
-		console.log(response.text());
 		return false;
 	}
 });
