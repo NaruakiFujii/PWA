@@ -40,7 +40,7 @@ $(function() {
 		fetch(url)
 			.then(function(response) {
 				console.log(response.text());
-				var dbData = promise.value;
+				var dbData = promise.PromiseVlue;
 				if (data.id === dbData[0] && data.pass === dbData[1]) {
 					return true;
 				}
