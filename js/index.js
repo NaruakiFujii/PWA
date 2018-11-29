@@ -36,10 +36,10 @@ $(function() {
 	});
 
 	function checkLogin(data) {
-		var url = "/PWA/testDB.json";
+		var url = "/PWA/testDB.txt";
 		fetch(url)
 			.then(response => {
-				const dbData = response.body.getReader();
+				var dbData = response.body.getReader().split(' ');
 				if (data.id === dbData[0] && data.pass === dbData[1]) {
 					return true;
 				}
