@@ -36,10 +36,8 @@ $(function() {
 	});
 
 	function checkLogin(data) {
-		var url = "/PWA/testDB.txt";
-		fetch(url, {
-			method: "GET"
-		})
+		var url = "/PWA/testDB.json";
+		fetch(url)
 			.then(response => {
 				var dbData = response.body.getReader().split(' ');
 				if (data.id === dbData[0] && data.pass === dbData[1]) {
