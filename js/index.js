@@ -39,11 +39,12 @@ $(function() {
 		var url = "/PWA/testDB.txt";
 		fetch(url)
 			.then(function(response) {
-				var str = response.text();
-				var dbData = str.promise.split();
-				if (data.id === dbData[0] && data.pass === dbData[1]) {
-					return true;
-				}
+//				var str = response.text();
+//				var dbData = str.promise.split();
+//				if (data.id === dbData[0] && data.pass === dbData[1]) {
+//					return true;
+//				}
+				return response.text();
 			})
 
 		//サーバーからデータ取ってきたい
