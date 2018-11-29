@@ -39,7 +39,7 @@ $(function() {
 		var url = "/PWA/testDB.json";
 		fetch(url)
 			.then(response => {
-				var dbData = response.body.getReader().split(' ');
+				const dbData = response.body.getReader();
 				if (data.id === dbData[0] && data.pass === dbData[1]) {
 					return true;
 				}
