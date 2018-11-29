@@ -39,7 +39,7 @@ $(function() {
 		var url = "/PWA/testDB.txt";
 		fetch(url)
 			.then(function(response) {
-				var promise = response.text();
+				console.log(response.text());
 				var dbData = promise.value;
 				if (data.id === dbData[0] && data.pass === dbData[1]) {
 					return true;
@@ -54,6 +54,7 @@ $(function() {
 //		if (data.id === dbData[0] && data.pass === dbData[1]) {
 //			return true;
 //		}
+		console.log(response.text());
 		return false;
 	}
 });
