@@ -22,10 +22,10 @@ $(function(){
 	})();
 
 	//値送る仕組みを後で入れる
-	$('.arrive-button').click(function(){
+	$('.arrive-button').on("click", function(){
 		alert("出社打刻しました");
 	});
-	$('.leave-button').click(function(){
+	$('.leave-button').on("click", function(){
 		alert("退社打刻しました");
 	});
 
