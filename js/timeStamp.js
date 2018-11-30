@@ -13,7 +13,7 @@ $(function(){
 //		}
 
 		//cookie
-		alert($.cookie("userData"));
+		alert($.cookie("userData.id"), $.cookie("userData.pass");
 
 		//fetchAPI
 //		var myHeaders = new Headers();
@@ -21,6 +21,7 @@ $(function(){
 
 	})();
 
+	//値送る仕組みを後で入れる
 	$('.arrive-button').click(function(){
 		alert("出社打刻しました");
 	});
