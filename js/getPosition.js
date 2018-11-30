@@ -1,4 +1,4 @@
-$('.loginbutton').click(function() {
+$('.get-position').click(function() {
 	// 現在地を取得
 	navigator.geolocation.getCurrentPosition(
 		// 取得成功した場合
