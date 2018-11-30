@@ -46,6 +46,33 @@ $(function() {
 				}
 //				return response.text();
 			})
+		fetch('verylongdata.txt')
+			.then((response) => response.body.getReader()) // ReadableStreamを取得する。
+			.then((reader) => {
+			// ReadableStream.read()はPromiseを返す。
+			// Promiseは{ done, value }として解決される。
+			// データを読み込んだとき：doneはfalse, valueは値。
+			// データを読み込み終わったとき：doneはtrue, valueはundefined。
+				function readChunk({done, value}) {
+					if(done) {
+						// 読み込みが終わっていれば最終的なテキストを表示する。
+						console.log(veryLongText);
+						return;
+					}
+
+					var dbData += decoder.decode(value).split(' ');
+
+					if (data.id === dbData[0] && data.pass === dbData[1]) {
+						return true;
+					}
+
+					// 次の値を読みにいく。
+					reader.read().then(readChunk);
+				}
+
+				// 最初の値を読み込む。
+				reader.read().then(readChunk);
+			})
 
 		//サーバーからデータ取ってきたい
 //		var str = "0001 1";
