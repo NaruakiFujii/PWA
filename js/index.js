@@ -46,7 +46,7 @@ $(function() {
 				}
 //				return response.text();
 			})
-		fetch('verylongdata.txt')
+		fetch(url)
 			.then((response) => response.body.getReader()) // ReadableStreamを取得する。
 			.then((reader) => {
 			// ReadableStream.read()はPromiseを返す。
