@@ -7,6 +7,9 @@
 			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			crossorigin="anonymous"></script>
 
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue-cookies@1.5.7/vue-cookies.js"></script>
+
 		<script type="text/javascript" src="js/jquery.cookie.js"></script>
 		<script type="text/javascript" src="js/registSw.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
@@ -19,17 +22,15 @@
 		<h1>LOGIN</h1>
 	</header>
 	<body>
-		<div class="inputId">
+		<div class="inputUserData">
 			<p class="id">ID：
-				<input type="text" name="id" />
+				<input type="text" name="id" v-model="id" />
 			</p>
 			<p class="password">PASSWORD：
-				<input type="password" name="password" />
+				<input type="password" name="password" v-model="pass" />
 			</p>
-		</div>
-		<div class="buttonarea">
 			<p>
-				<button type="submit" class="loginbutton" onclick="location.href='/PWA/views/timeStamp'" value="ログイン">ログイン</button>
+				<button @click="checkUser" class="loginbutton"" value="ログイン">ログイン</button>
 				<button type="submit" class="get-position" value="position">位置情報</button>
 			</p>
 		</div>
