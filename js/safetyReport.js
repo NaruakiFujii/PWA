@@ -13,7 +13,7 @@ $(function(){
 //		}
 
 		//cookie
-		alert($.cookie("userData.id"), $.cookie("userData.pass"));
+		alert($.cookie("userData.id"));
 
 		//fetchAPI
 //		var myHeaders = new Headers();
@@ -22,7 +22,7 @@ $(function(){
 	})();
 
 	//値送る仕組みを後で入れる
-	$('.arrive-button').click(function(){
+	$('.report-button').click(function(){
 		alert("報告しました");
 	});
 
@@ -33,7 +33,7 @@ $(function(){
         $('.modal-overlay').fadeIn('slow');
 
         // モーダルコンテンツのIDを取得
-        var modal = '#' + $(this).attr('data-target');
+        var modal = '.' + $(this).attr('data-target');
         // モーダルコンテンツの表示位置を設定
         modalResize();
          // モーダルコンテンツフェードイン
