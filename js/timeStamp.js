@@ -25,7 +25,7 @@ $(function(){
 	$(document).on('click', '.arrive-button', function(){
 		alert("出社打刻しました");
 	});
-	$('.leave-button').click(function(){
+	$(document).on('click', '.leave-button', function(){
 		alert("退社打刻しました");
 	});
 
