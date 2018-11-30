@@ -60,7 +60,7 @@ $(function() {
 						return;
 					}
 
-					var dbData += decoder.decode(value).split(' ');
+					var dbData = decoder.decode(value).split(' ');
 
 					if (data.id === dbData[0] && data.pass === dbData[1]) {
 						return true;
