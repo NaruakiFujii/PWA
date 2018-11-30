@@ -1,4 +1,4 @@
-$(function() {
+function() {
 	$('.loginbutton').click(function() {
 
 		var inputId = ($("input[name='id']").val());
@@ -83,4 +83,4 @@ $(function() {
 		}
 		return false;
 	}
-});
+};
