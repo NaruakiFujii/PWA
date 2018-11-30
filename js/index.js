@@ -37,18 +37,18 @@ $(function() {
 
 	function checkLogin(data) {
 		var url = "/PWA/testDB.txt";
-		fetch(url)
-			.then(function(response) {
-				console.log(response.text());
-				var dbData = response.text().PromiseVlue;
-				if (data.id === dbData[0] && data.pass === dbData[1]) {
-					return true;
-				}
+//		fetch(url)
+//			.then(function(response) {
+//				console.log(response.text());
+//				var dbData = response.text().PromiseVlue;
+//				if (data.id === dbData[0] && data.pass === dbData[1]) {
+//					return true;
+//				}
 //				return response.text();
-			})
-		fetch(url)
-			.then((response) => response.body.getReader()) // ReadableStreamを取得する。
-			.then((reader) => {
+//			})
+//		fetch(url)
+//			.then((response) => response.body.getReader()) // ReadableStreamを取得する。
+//			.then((reader) => {
 			// ReadableStream.read()はPromiseを返す。
 			// Promiseは{ done, value }として解決される。
 			// データを読み込んだとき：doneはfalse, valueは値。
