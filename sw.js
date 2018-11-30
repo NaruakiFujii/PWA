@@ -3,8 +3,7 @@ var urlsToCache = [
 	'/PWA',
 	'/PWA/manifest.json',
 	'/PWA/index.html',
-	'/PWA/js/index.js',
-	'https://code.jquery.com/jquery-3.3.1.min.js'
+	'/PWA/js/index.js'
 ];
 
 self.addEventListener('install', function(event) {
