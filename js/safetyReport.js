@@ -22,7 +22,7 @@ $(function(){
 	})();
 
 	//値送る仕組みを後で入れる
-	$('.report-button').on("click", function(){
+	$('.report-button').click(function(){
 		alert("報告しました");
 	});
 
