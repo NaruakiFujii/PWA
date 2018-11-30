@@ -13,7 +13,7 @@ $(function(){
 //		}
 
 		//cookie
-		alert($.cookie("userData.id"), $.cookie("userData.pass");
+		alert($.cookie("userData.id"), $.cookie("userData.pass"));
 
 		//fetchAPI
 //		var myHeaders = new Headers();
