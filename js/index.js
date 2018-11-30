@@ -72,7 +72,7 @@ $(function() {
 
 				// 最初の値を読み込む。
 //				reader.read().then(readChunk);
-			})
+//			})
 
 		//サーバーからデータ取ってきたい
 		var str = "0001 1";
