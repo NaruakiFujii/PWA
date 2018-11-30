@@ -1,6 +1,6 @@
 
 
-$(function(){
+function main(){
 
 	(function (){
 
@@ -19,7 +19,7 @@ $(function(){
 //		var myHeaders = new Headers();
 //		console.log(myHeaders.get("X-userData"));
 
-	})();
+	});
 
 	//値送る仕組みを後で入れる
 	$('.arrive-button').click(function(){
@@ -73,4 +73,4 @@ $(function(){
 
     });
 
-});
+};
