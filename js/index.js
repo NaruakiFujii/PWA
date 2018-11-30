@@ -19,7 +19,7 @@ $(function() {
 //		window.sessionStorage.setItem(['userPass'], [inputPass]);
 
 		//cookie
-		$.cookie("userData", data);
+		$.cookie("userData", JSON.stringify(data));
 
 		////fetchAPI試してみた
 		//Ajaxみたいな非同期通信だった…
