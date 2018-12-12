@@ -25,11 +25,11 @@
 		<div id="inputUserData">
 			<p class="id">ID：
 				<input type="text" name="id" v-model="id" />
-				<div class="error" v-if="error.require">必須項目です。</div>
+				<div class="error" v-if="error.id_require">必須項目です。</div>
 			</p>
 			<p class="password">PASSWORD：
 				<input type="password" name="password" v-model="pass" />
-				<div class="error" v-if="error.require">必須項目です。</div>
+				<div class="error" v-if="error.pass_require">必須項目です。</div>
 			</p>
 			<p>
 				<button @click="checkUser" class="loginbutton"" value="ログイン">ログイン</button>

@@ -38,17 +38,18 @@ new Vue({
 	el: '#inputUserData',
 	watch: {
 		id: function(newVal, oldVal) {
-			this.error.require = (newVal.length < 1) ? true :false;
+			this.error.id_require = (newVal.length < 1) ? true :false;
 		}
 	},
 	watch: {
 		pass: function(newVal, oldVal) {
-			this.error.require = (newVal.length < 1) ? true :false;
+			this.error.pass_require = (newVal.length < 1) ? true :false;
 		}
 	}
 	data: {
 		error: {
-			require: false
+			id_require: false
+			pass_require: false
 		}
 	}
 });
