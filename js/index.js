@@ -40,10 +40,12 @@ new Vue({
 		id: function(newVal, oldVal) {
 			this.error.require = (newVal.length < 1) ? true :false;
 		}
+	},
+	watch: {
 		pass: function(newVal, oldVal) {
 			this.error.require = (newVal.length < 1) ? true :false;
 		}
-	},
+	}
 	data: {
 		error: {
 			require: false
