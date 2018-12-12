@@ -37,7 +37,10 @@ var there = "/PWA/views/timeStamp";
 new Vue({
 	el: '#inputUserData',
 	watch: {
-		message: function(newVal, oldVal) {
+		id: function(newVal, oldVal) {
+			this.error.require = (newVal.length < 1) ? true :false;
+		}
+		pass: function(newVal, oldVal) {
 			this.error.require = (newVal.length < 1) ? true :false;
 		}
 	},
@@ -46,4 +49,4 @@ new Vue({
 			require: false
 		}
 	}
-})
+});
