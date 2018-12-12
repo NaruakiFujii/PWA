@@ -7,7 +7,7 @@ $(function() {
 		var data = {
 			id : inputId,
 			pass : inputPass
-		}
+		};
 		var loginStatus = checkLogin(data);
 
 		if (!loginStatus) {
@@ -36,14 +36,14 @@ var there = "/PWA/views/timeStamp";
 
 new Vue({
 	el: '.inputUserData',
-	routes: [
-		{ path: here, redirect: to => {
-			checkUser: function(){
-				if(this.id == 0001 && this.pass == 1){
-					return here;
-				}
-				return there;
-			}
-		}}
-	]
+	watch: {
+		message: function(newVal, oldVal) {
+			this.error.require = (newVal.length < 1) ? true :false;
+		}
+	},
+	data: {
+		error: {
+			require: false
+		}
+	}
 })
