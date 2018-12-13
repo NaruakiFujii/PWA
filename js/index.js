@@ -39,7 +39,7 @@ var test = new Vue({
 	watch: {
 		id: function(newVal, oldVal) {
 			this.error.id_require = (newVal.length < 1) ? true :false;
-		}
+		},
 		pass: function(newVal, oldVal) {
 			this.error.pass_require = (newVal.length < 1) ? true :false;
 		}
