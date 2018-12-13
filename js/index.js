@@ -48,7 +48,7 @@ new Vue({
 	},
 	data: {
 		error: {
-			id_require: false
+			id_require: false,
 			pass_require: false
 		}
 	}
