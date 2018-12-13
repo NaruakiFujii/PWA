@@ -45,7 +45,7 @@ new Vue({
 		pass: function(newVal, oldVal) {
 			this.error.pass_require = (newVal.length < 1) ? true :false;
 		}
-	}
+	},
 	data: {
 		error: {
 			id_require: false
