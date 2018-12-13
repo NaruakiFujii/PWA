@@ -34,7 +34,7 @@ $(function() {
 var here = "/PWA";
 var there = "/PWA/views/timeStamp";
 
-new Vue({
+var test = new Vue({
 	el: '#inputUserData',
 	watch: {
 		id: function(newVal, oldVal) {
