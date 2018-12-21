@@ -34,22 +34,68 @@ $(function() {
 var here = "/PWA";
 var there = "/PWA/views/timeStamp";
 
-var test = new Vue({
-	el: '#inputUserData',
-	watch: {
-		id: function(newVal, oldVal) {
-			this.error.id_require = (newVal.length < 1) ? true :false;
-		},
-		pass: function(newVal, oldVal) {
-			this.error.pass_require = (newVal.length < 1) ? true :false;
+//var test = new Vue({
+//	el: '#inputUserData',
+//	watch: {
+//		id: function(newVal, oldVal) {
+//			this.error.id_require = (newVal.length < 1 || newVal.length > 5) ? true :false;
+//		},
+//		pass: function(newVal, oldVal) {
+//			this.error.pass_require = (newVal.length < 1) ? true :false;
+//		}
+//	},
+//	data: {
+//		id: "",
+//		pass: "",
+//		error: {
+//			id_require: false,
+//			pass_require: false
+//		}
+//	}
+//});
+
+var auth = {
+	login: function(id, pass){
+		if(id === "0001" && pass === "1"){
+			window.location.href = '/PWA/views/timeStamp';
 		}
-	},
-	data: {
-		id: "",
-		pass: "",
-		error: {
-			id_require: false,
-			pass_require: false
+		else{
+			window.alert("wrong ID or PASSWORD");
 		}
 	}
+}
+
+var loginTemplate = '
+	<div id="login-template">
+		<p class="id">ID：
+			<input type="text" placeholder="ログインID" v-model="userId" />
+			<div class="error" v-if="error.id_require">必須項目です。</div>
+		</p>
+		<p class="password">PASSWORD：
+			<input type="password" name="placeholder="パスワード" v-model="pass" />
+			<div class="error" v-if="error.pass_require">必須項目です。</div>
+		</p>
+		<p>
+			<button v-on:click="login">ログイン(vue.js)</button>
+		</p>
+	</div>
+'
+
+Vue.component('login-form', {
+	template: loginTemplate,
+	data: function(){
+		return {
+			userId: '',
+			pass: ''
+		}
+	},
+	methods: {
+		login: function(){
+			auth.login(this.userId, this.pass);
+		}
+	}
+});
+
+new Vue({
+	el: "#login"
 });

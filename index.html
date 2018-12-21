@@ -8,6 +8,7 @@
 			crossorigin="anonymous"></script>
 
 		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
 		<script src="https://unpkg.com/vue-cookies@1.5.7/vue-cookies.js"></script>
 
 	</head>
@@ -16,20 +17,11 @@
 		<h1>LOGIN</h1>
 	</header>
 	<body>
-		<div id="inputUserData">
-			<p class="id">ID：
-				<input type="text" name="id" v-model="id" />
-				<div class="error" v-if="error.id_require">必須項目です。</div>
-			</p>
-			<p class="password">PASSWORD：
-				<input type="password" name="password" v-model="pass" />
-				<div class="error" v-if="error.pass_require">必須項目です。</div>
-			</p>
-			<p>
-				<button type="submit" class="loginbutton" onclick="location.href='/PWA/views/timeStamp'" value="ログイン">ログイン</button>
-				<button type="submit" class="get-position" value="position">位置情報</button>
-			</p>
+		<div id="login">
+			<login-form></login-form>
 		</div>
+		<button type="submit" class="loginbutton" onclick="location.href='/PWA/views/timeStamp'" value="ログイン">ログイン</button>
+		<button type="submit" class="get-position" value="position">位置情報</button>
 	</body>
 
 	<script type="text/javascript" src="js/jquery.cookie.js"></script>
