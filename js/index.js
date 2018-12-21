@@ -65,7 +65,21 @@ var auth = {
 	}
 }
 
-var loginTemplate = '<div id="login-template">		<p class="id">ID：			<input type="text" placeholder="ログインID" v-model="userId" />			<div class="error" v-if="error.id_require">必須項目です。</div>		</p>		<p class="password">PASSWORD：			<input type="password" name="placeholder="パスワード" v-model="pass" />	<div class="error" v-if="error.pass_require">必須項目です。</div></p><p><button v-on:click="login">ログイン(vue.js)</button></p></div>'
+var loginTemplate = `
+	<div id="login-template">
+		<p class="id">ID：
+			<input type="text" placeholder="ログインID" v-model="userId" />
+			<div class="error" v-if="error.id_require">必須項目です。</div>
+		</p>
+		<p class="password">PASSWORD：
+			<input type="password" name="placeholder="パスワード" v-model="pass" />
+			<div class="error" v-if="error.pass_require">必須項目です。</div>
+		</p>
+		<p>
+			<button v-on:click="login">ログイン(vue.js)</button>
+		</p>
+	</div>
+`
 
 Vue.component('login-form', {
 	template: loginTemplate,
