@@ -22,7 +22,7 @@ var router = new VueRouter({
 
 
 // ルーターのインスタンスをrootとなるVueインスタンスに渡します
-var time3-cloud = new Vue({
+var time3Cloud = new Vue({
 	router: router
 }).$mount('#time3-cloud')
 
