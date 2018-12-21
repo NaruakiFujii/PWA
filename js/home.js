@@ -7,12 +7,14 @@ var router = new VueRouter({
 	routes: [
 		{
 			path: '/timeStamp',
+			name: 'timeStamp',
 			component: {
 				template: '#time-stamp'
 			}
 		},
 		{
 			path: '/safetyReport',
+			name: 'safetyReport',
 			component: {
 				template: '#safety-report'
 			}
