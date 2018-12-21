@@ -7,15 +7,11 @@ var router = new VueRouter({
 	routes: [
 		{
 			path: '/timeStamp',
-			component: {
-				template: TimeStamp
-			}
+			component: TimeStamp
 		},
 		{
 			path: '/safetyReport',
-			component: {
-				template: SafetyReport
-			}
+			component: SafetyReport
 		}
 	]
 })
