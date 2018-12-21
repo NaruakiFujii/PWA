@@ -21,12 +21,13 @@
 		</div>
 
 		<script type="x-template" id="time-stamp">
-			<div class="time">
-				<p>現在時刻は
-				<span id="currenttime">
+			<div>
+				<div class="time">
+					<p>現在時刻は
+					<span id="currenttime">
 
-				</span>
-				です</p>
+					</span>
+					です</p>
 
 				</div>
 				<input data-target="arrive" class="modal-open" type="button" value="出社" />
@@ -47,22 +48,24 @@
 		</script>
 
 		<script type="x-template" id="safety-report">
-			<input data-target="all-ok" class="modal-open" type="button" value="異常なし" />
-			<input data-target="im-not-ok" class="modal-open" type="button" value="家族被害" />
-			<input data-target="home-not-ok" class="modal-open" type="button" value="家屋被害" />
-			<input data-target="yabai" class="modal-open" type="button" value="非常にやばい" />
+			<div>
+				<input data-target="all-ok" class="modal-open" type="button" value="異常なし" />
+				<input data-target="im-not-ok" class="modal-open" type="button" value="家族被害" />
+				<input data-target="home-not-ok" class="modal-open" type="button" value="家屋被害" />
+				<input data-target="yabai" class="modal-open" type="button" value="非常にやばい" />
 
-			<div class="all-ok modal-content">
-				<p>『異常なし』で報告しますか？</p>
-				<input class="report-button modal-close" type="button" value="報告" />
-				<input class="modal-close" type="button" value="キャンセル" />
-			</div>
+				<div class="all-ok modal-content">
+					<p>『異常なし』で報告しますか？</p>
+					<input class="report-button modal-close" type="button" value="報告" />
+					<input class="modal-close" type="button" value="キャンセル" />
+				</div>
 
-			<div class="im-not-ok home-not-ok yabai modal-content">
-				<p>被害状況を入力してください</p>
-				<textarea class="joukyou" placeholder="被害状況を入力してください" ></textarea><br>
-				<input class="report-button modal-close" type="button" value="報告" />
-				<input class="modal-close" type="button" value="キャンセル" />
+				<div class="im-not-ok home-not-ok yabai modal-content">
+					<p>被害状況を入力してください</p>
+					<textarea class="joukyou" placeholder="被害状況を入力してください" ></textarea><br>
+					<input class="report-button modal-close" type="button" value="報告" />
+					<input class="modal-close" type="button" value="キャンセル" />
+				</div>
 			</div>
 		</script>
 	</body>
