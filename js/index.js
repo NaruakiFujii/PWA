@@ -97,5 +97,13 @@ Vue.component('login-form', {
 });
 
 new Vue({
-	el: "#login"
+	el: "#login",
+	watch: {
+		userId: function(newVal, oldVal) {
+			this.error.id_require = (newVal.length < 1) ? true :false;
+		},
+		pass: function(newVal, oldVal) {
+			this.error.pass_require = (newVal.length < 1) ? true :false;
+		}
+	}
 });
