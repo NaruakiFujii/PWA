@@ -8,13 +8,13 @@ var router = new VueRouter({
 		{
 			path: '/timeStamp',
 			component: {
-				template: timeStamp
+				template: TimeStamp
 			}
 		},
 		{
 			path: '/safetyReport',
 			component: {
-				template: safetyReport
+				template: SafetyReport
 			}
 		}
 	]
