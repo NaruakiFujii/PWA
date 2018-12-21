@@ -9,19 +9,15 @@
 
 		<link rel="stylesheet" type="text/css" href="../css/modal.css">
 
-		<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-		<script type="text/javascript" src="../js/safetyReport.js"></script>
-		<script type="text/javascript" src="../js/fetch.js"></script>
-		<script type="text/javascript" src="../js/json2.js"></script>
 	</head>
 	<header class="homeheader">
 		<h1>安否報告</h1>
 	</header>
 	<body>
 		<input data-target="all-ok" class="modal-open" type="button" value="異常なし" />
-		<input data-target="im-not-ok" class="modal-open" type="button" value="人的被害" />
+		<input data-target="im-not-ok" class="modal-open" type="button" value="家族被害" />
 		<input data-target="home-not-ok" class="modal-open" type="button" value="家屋被害" />
-		<input data-target="yabai" class="modal-open" type="button" value="その他の被害" />
+		<input data-target="yabai" class="modal-open" type="button" value="非常にやばい" />
 
 		<div class="all-ok modal-content">
 			<p>『異常なし』で報告しますか？</p>
@@ -35,18 +31,11 @@
 			<input class="report-button modal-close" type="button" value="報告" />
 			<input class="modal-close" type="button" value="キャンセル" />
 		</div>
-<!--
-		<div id="home-not-ok" class="modal-content">
-			<p>退社打刻しますか？</p>
-			<input class="leave-button modal-close" type="button" value="退社" />
-			<input class="modal-close" type="button" value="キャンセル" />
-		</div>
-
-		<div id="yabai" class="modal-content">
-			<p>やばいですか？</p>
-			<input class="leave-button modal-close" type="button" value="退社" />
-			<input class="modal-close" type="button" value="キャンセル" />
-		</div>
--->
 	</body>
+
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/safetyReport.js"></script>
+	<script type="text/javascript" src="../js/modal.js"></script>
+	<script type="text/javascript" src="../js/fetch.js"></script>
+	<script type="text/javascript" src="../js/json2.js"></script>
 </html>

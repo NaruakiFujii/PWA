@@ -57,7 +57,7 @@ var there = "/PWA/views/timeStamp";
 var auth = {
 	login: function(id, pass){
 		if(id === "0001" && pass === "1"){
-			window.location.href = '/PWA/views/timeStamp';
+			window.location.href = '/PWA/views/home';
 		}
 		else{
 			window.alert("wrong ID or PASSWORD");

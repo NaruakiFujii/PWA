@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"></meta>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" type="text/css" href="../css/modal.css">
+
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
+		<script src="https://unpkg.com/vue-cookies@1.5.7/vue-cookies.js"></script>
+	</head>
+	<header class="homeheader">
+		<h1>打刻</h1>
+	</header>
+	<body>
+		<div class="time3-cloud">
+			<router-link to="/timeStamp">打刻ページ</router-link>
+			<router-link to="/sagetyReport">安否報告</router-link>
+		</div>
+
+		<script type="x-template" id="time-stamp">
+			<div class="time">
+				<p>現在時刻は
+				<span id="currenttime">
+					<script>
+						var time= new Date();
+						var hour = time.getHours();
+						var minute = time.getMinutes();
+						var second = time.getSeconds();
+						document.write(hour+"時"+minute+"分"+second+"秒");
+					</script>
+				</span>
+				です</p>
+
+				</div>
+				<input data-target="arrive" class="modal-open" type="button" value="出社" />
+				<input data-target="leave" class="modal-open" type="button" value="退社" />
+
+				<div id="arrive" class="modal-content">
+					<p>出社打刻しますか？</p>
+					<input class="arrive-button modal-close" type="button" value="出社" />
+					<input class="modal-close" type="button" value="キャンセル" />
+				</div>
+
+				<div id="leave" class="modal-content">
+					<p>退社打刻しますか？</p>
+					<input class="leave-button modal-close" type="button" value="退社" />
+					<input class="modal-close" type="button" value="キャンセル" />
+				</div>
+			</div>
+		</script>
+
+		<script type="x-template" id="safety-report">
+			<input data-target="all-ok" class="modal-open" type="button" value="異常なし" />
+			<input data-target="im-not-ok" class="modal-open" type="button" value="家族被害" />
+			<input data-target="home-not-ok" class="modal-open" type="button" value="家屋被害" />
+			<input data-target="yabai" class="modal-open" type="button" value="非常にやばい" />
+
+			<div class="all-ok modal-content">
+				<p>『異常なし』で報告しますか？</p>
+				<input class="report-button modal-close" type="button" value="報告" />
+				<input class="modal-close" type="button" value="キャンセル" />
+			</div>
+
+			<div class="im-not-ok home-not-ok yabai modal-content">
+				<p>被害状況を入力してください</p>
+				<textarea class="joukyou" placeholder="被害状況を入力してください" ></textarea><br>
+				<input class="report-button modal-close" type="button" value="報告" />
+				<input class="modal-close" type="button" value="キャンセル" />
+			</div>
+		</script>
+	</body>
+
+	<script type="text/javascript" src="../js/home.js"></script>
+
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/timeStamp.js"></script>
+	<script type="text/javascript" src="../js/safetyReport.js"></script>
+	<script type="text/javascript" src="../js/modal.js"></script>
+	<script type="text/javascript" src="../js/fetch.js"></script>
+	<script type="text/javascript" src="../js/json2.js"></script>
+</html>
