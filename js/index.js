@@ -71,7 +71,7 @@ var loginTemplate = `
 			<input type="text" placeholder="ログインID" v-model="userId" />
 		</p>
 		<p class="password">PASSWORD：
-			<input type="password" name="placeholder="パスワード" v-model="pass" />
+			<input type="password" placeholder="パスワード" v-model="pass" />
 		</p>
 		<p>
 			<button v-on:click="login">ログイン(vue.js)</button>
