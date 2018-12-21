@@ -13,9 +13,6 @@
 		<script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
 		<script src="https://unpkg.com/vue-cookies@1.5.7/vue-cookies.js"></script>
 	</head>
-	<header class="homeheader">
-		<h1>打刻</h1>
-	</header>
 	<body>
 		<div id="time3-cloud">
 			<router-link to="/timeStamp">打刻ページ</router-link>
@@ -26,13 +23,7 @@
 			<div class="time">
 				<p>現在時刻は
 				<span id="currenttime">
-					<script>
-						var time= new Date();
-						var hour = time.getHours();
-						var minute = time.getMinutes();
-						var second = time.getSeconds();
-						document.write(hour+"時"+minute+"分"+second+"秒");
-					</script>
+
 				</span>
 				です</p>
 
