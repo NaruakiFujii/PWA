@@ -69,11 +69,9 @@ var loginTemplate = `
 	<div id="login-template">
 		<p class="id">ID：
 			<input type="text" placeholder="ログインID" v-model="userId" />
-			<div class="error" v-if="error.id_require">必須項目です。</div>
 		</p>
 		<p class="password">PASSWORD：
 			<input type="password" name="placeholder="パスワード" v-model="pass" />
-			<div class="error" v-if="error.pass_require">必須項目です。</div>
 		</p>
 		<p>
 			<button v-on:click="login">ログイン(vue.js)</button>
@@ -92,14 +90,6 @@ Vue.component('login-form', {
 	methods: {
 		login: function(){
 			auth.login(this.userId, this.pass);
-		}
-	},
-	watch: {
-		userId: function(newVal, oldVal) {
-			this.error.id_require = (newVal.length < 1) ? true :false;
-		},
-		pass: function(newVal, oldVal) {
-			this.error.pass_require = (newVal.length < 1) ? true :false;
 		}
 	}
 });
