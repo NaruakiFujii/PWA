@@ -6,12 +6,16 @@ var router = new VueRouter({
 	// コンポーネントオプションのオブジェクトでも構いません
 	routes: [
 		{
-			path: '/safetyReport',
-			component: SafetyReport
+			path: '/timeStamp',
+			component: {
+				template: '#time-stamp'
+			}
 		},
 		{
-			path: '/timeStamp',
-			component: TimeStamp
+			path: '/safetyReport',
+			component: {
+				template: '#safety-report'
+			}
 		}
 	]
 })
