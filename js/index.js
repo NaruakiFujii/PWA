@@ -93,11 +93,7 @@ Vue.component('login-form', {
 		login: function(){
 			auth.login(this.userId, this.pass);
 		}
-	}
-});
-
-new Vue({
-	el: "#login",
+	},
 	watch: {
 		userId: function(newVal, oldVal) {
 			this.error.id_require = (newVal.length < 1) ? true :false;
@@ -106,4 +102,8 @@ new Vue({
 			this.error.pass_require = (newVal.length < 1) ? true :false;
 		}
 	}
+});
+
+new Vue({
+	el: "#login"
 });
